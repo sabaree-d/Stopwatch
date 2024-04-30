@@ -18,7 +18,11 @@ function App() {
   }, [isRunning]);
 
   const startStopwatch = () => {
-    setIsRunning(!isRunning);
+    setIsRunning(true);
+  };
+
+  const stopStopwatch = () => {
+    setIsRunning(false);
   };
 
   const resetStopwatch = () => {
@@ -41,7 +45,7 @@ function App() {
           {!isRunning ? (
             <button onClick={startStopwatch}>Start</button>
           ) : (
-            <button onClick={startStopwatch}>Stop</button>
+            <button onClick={stopStopwatch}>Stop</button>
           )}
           <button onClick={resetStopwatch}>Reset</button>
         </div>
