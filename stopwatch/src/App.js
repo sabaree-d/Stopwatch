@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [time, setTime] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
-
+ 
   useEffect(() => {
     let timer;
     if (isRunning) {
